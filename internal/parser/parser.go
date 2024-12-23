@@ -8,10 +8,6 @@ type Parser struct {
 	Output    chan []byte
 }
 
-type Data struct {
-	Url string
-}
-
 func Init(input chan string, output chan []byte) Parser {
 	c := colly.NewCollector()
 	return Parser{
