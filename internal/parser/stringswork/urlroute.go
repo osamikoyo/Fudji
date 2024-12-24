@@ -5,6 +5,7 @@ import "strings"
 type Data struct {
 	Url     string
 	KeyWord string
+	Value   float64
 }
 
 func GetKeyWord(urls []string) []Data {
@@ -17,4 +18,9 @@ func GetKeyWord(urls []string) []Data {
 		})
 	}
 	return datas
+}
+
+func GetOneKeyWord(str string) string {
+	urls := strings.Split(str, "/")
+	return urls[len(urls)-1]
 }
